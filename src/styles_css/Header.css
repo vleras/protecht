@@ -1,0 +1,44 @@
+* {
+  overflow-x: none;
+  box-sizing: border-box;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  color: white;
+  padding: 30px 30px 30px 30px;
+  width: 100%;
+}
+.logo-image {
+  width: 230px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.5);
+  transition: color 0.3s ease;
+  font-size: 16px;
+}
+
+.nav-links a.active {
+  color: white; /* Color for active link */
+}
+
+.nav-links a:hover {
+  color: white; /* Optional hover effect */
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+  }
+}

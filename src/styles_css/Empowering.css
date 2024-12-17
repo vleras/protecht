@@ -1,0 +1,101 @@
+/* Container */
+.smart-management-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white; /* Adjust to match the light background */
+  padding: 40px;
+
+  border-radius: 20px;
+  width: 90%;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+/* Left Section */
+.smart-management-left {
+  flex: 1;
+  text-align: left;
+}
+
+.icon-container {
+  margin-bottom: 15px;
+}
+
+.smart-management-icon {
+  width: 100px;
+  height: auto;
+}
+
+.smart-management-title {
+  font-size: 40px;
+  color: #4086de;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.smart-management-description {
+  font-size: 18px;
+  color: #555;
+}
+.smart-management-right {
+  /* background: url("../images/ourbenefits1.png") no-repeat center center; */
+  background-size: cover;
+  color: #fff; /* Ensures text remains readable */
+  border-radius: 10px;
+  padding: 20px;
+  line-height: 1.6;
+}
+
+/* Right Section */
+.smart-management-right {
+  flex: 2;
+  background-color: #4086de; /* Blue background */
+  color: #fff;
+  border-radius: 20px;
+  padding: 20px 50px;
+  line-height: 1.6;
+}
+
+.content-box p {
+  margin-bottom: 15px;
+}
+
+@media (max-width: 1024px) {
+  .smart-management-container {
+    flex-direction: column;
+    padding-bottom: 0px;
+  }
+
+  .smart-management-left,
+  .smart-management-right {
+    flex: none;
+    width: 100%;
+  }
+
+  .smart-management-right {
+    padding: 20px 50px;
+  }
+
+  .smart-management-icon {
+    width: 80px; /* Slightly smaller icon for tablets and mobile */
+  }
+  .smart-management-title {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .smart-management-title {
+    font-size: 1.8rem; /* Adjust title size for smaller screens */
+    margin-top: 0;
+  }
+
+  .smart-management-description {
+    font-size: 0.9rem;
+  }
+
+  .content-box p {
+    font-size: 0.9rem;
+  }
+}
