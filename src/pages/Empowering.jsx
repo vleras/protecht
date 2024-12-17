@@ -5,6 +5,11 @@ import ourbenefits1 from "../images/ourbenefits1.png";
 import ourbenefits2 from "../images/ourbenefits2.png";
 import ourbenefits3 from "../images/ourbenefits3.png";
 import ourbenefits4 from "../images/ourbenefits4.png";
+import empowering1 from "../images/empowering1.png";
+import empowering2 from "../images/empowering2.png";
+import empowering3 from "../images/empowering3.png";
+import empowering4 from "../images/empowering4.png";
+
 const Empowering = () => {
   return (
     <div>
@@ -26,9 +31,9 @@ const Empowering = () => {
         <div class="smart-management-left">
           <div class="icon-container">
             <img
-              src="https://protecht.ch/wp-content/uploads/2024/11/5f399f13-170e-413b-b328-a0e1dcfba5da.png"
+              src={empowering1}
               alt="Gear Icon"
-              class="smart-management-icon"
+              className="smart-management-icon"
             />
           </div>
 
@@ -73,11 +78,7 @@ const Empowering = () => {
       <section class="smart-management-container">
         <div class="smart-management-left">
           <div class="icon-container">
-            <img
-              src="https://protecht.ch/wp-content/uploads/2024/11/5f399f13-170e-413b-b328-a0e1dcfba5da.png"
-              alt="Code Icon"
-              class="smart-management-icon"
-            />
+            <img src={empowering2} class="smart-management-icon" />
           </div>
 
           <h2 class="smart-management-title">
@@ -126,7 +127,7 @@ const Empowering = () => {
         <div class="smart-management-left">
           <div class="icon-container">
             <img
-              src="https://protecht.ch/wp-content/uploads/2024/11/5f399f13-170e-413b-b328-a0e1dcfba5da.png"
+              src={empowering3}
               alt="Chat Icon"
               class="smart-management-icon"
             />
@@ -175,7 +176,7 @@ const Empowering = () => {
         <div class="smart-management-left">
           <div class="icon-container">
             <img
-              src="ourbenefits4.png"
+              src={empowering4}
               alt="Clipboard Icon"
               class="smart-management-icon"
             />
