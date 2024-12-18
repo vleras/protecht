@@ -14,17 +14,13 @@ const Empowering = () => {
   return (
     <div>
       <div className="hero">
-        <h3 className="services-heading">Services</h3>
+        <h3 className="services-heading">Our Benefits</h3>
         <h1 className="main-heading">
-          Your Creative Journey Starts Here. Our Comprehensive Services
+          Our benefits cater to your convenience.
         </h1>
         <p className="subheading">
-          Where Potential Meets Possibility: Cultivating Growth Through
-          Innovative Solutions
+          Innovating without limits, empowering your vision
         </p>
-        <button className="cta-button">
-          Get Started <span className="arrow">→</span>
-        </button>
       </div>
 
       <section class="smart-management-container">

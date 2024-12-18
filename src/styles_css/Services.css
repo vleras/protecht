@@ -18,45 +18,51 @@
 }
 
 .main-heading {
-  font-size: 48px;
-  font-weight: 400;
+  font-size: 50px;
+  font-weight: 500;
   width: 90%;
   margin: 20px 0;
 }
 
 .subheading {
-  font-size: 16px;
-  font-weight: 300;
+  font-size: 18px;
+  font-weight: 400;
   margin-bottom: 30px;
   color: #ddd;
 }
 
 .cta-button {
-  width: 160px;
-
+  width: 170px;
+  justify-content: space-between;
   color: white;
-  padding: 10px 20px;
-  font-size: 16px;
-  font-weight: 500;
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: 550;
   border: none;
   border-radius: 40px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+
   background: linear-gradient(
     90deg,
     #4086de 47%,
     /* Light blue */ #163351 100% /* Dark blue */
   ) !important;
 }
-
-.cta-button .arrow {
-  margin-left: 10px;
-  font-size: 18px;
-  font-weight: bold;
+.button-text {
+  margin-right: 10px; /* Spacing between text and icon */
+  font-size: 17px;
 }
-
+.button-icon {
+  display: flex;
+}
+.button-icon img {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+}
 .cta-button:hover {
   background: linear-gradient(
     90deg,
@@ -157,6 +163,11 @@
   background-repeat: no-repeat;
   border-radius: 20px; /* Optional: Add rounded corners */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow */
+}
+
+.cta-button {
+  text-decoration: none; /* Removes the underline */
+  color: inherit; /* Optional: Ensures the color matches the parent styling */
 }
 
 @media (max-width: 768px) {

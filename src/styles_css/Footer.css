@@ -247,4 +247,7 @@ p {
   .footer-newsletter input[type="email"] {
     width: 100%;
   }
+  .innovative {
+    font-size: 65px;
+  }
 }

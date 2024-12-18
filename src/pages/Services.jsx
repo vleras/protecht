@@ -1,5 +1,7 @@
 import React from "react";
 import "../styles_css/Services.css";
+import rightarrow from "../images/rightarrow.png";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   return (
@@ -13,9 +15,12 @@ const Services = () => {
           Where Potential Meets Possibility: Cultivating Growth Through
           Innovative Solutions
         </p>
-        <button className="cta-button">
-          Get Started <span className="arrow">→</span>
-        </button>
+        <a href="/contact" className="cta-button">
+          <span className="button-text">Get Started</span>
+          <span className="button-icon">
+            <img src={rightarrow} alt="Arrow Icon" />
+          </span>
+        </a>
       </div>
 
       <div className="services-section">

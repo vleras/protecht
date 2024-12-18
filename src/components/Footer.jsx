@@ -39,6 +39,7 @@ const Footer = () => {
                   color: "#C2C2C2",
                   paddingBottom: "10px",
                   fontSize: "18PX",
+                  marginBottom: "30px",
                 }}
               >
                 Subscribe to our newsletter to get the latest Protecht news
