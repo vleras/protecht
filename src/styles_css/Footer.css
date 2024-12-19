@@ -1,5 +1,6 @@
 .footer-container {
   padding: 40px;
+  padding-top: 80px;
   width: 100%;
   background-color: #000;
   color: #fff;
@@ -120,7 +121,7 @@ h4 {
 
 .gradient1 {
   height: 20px;
-  margin-top: 40px;
+
   background: linear-gradient(
     90deg,
     #4086de 0%,
@@ -135,7 +136,8 @@ h4 {
 }
 .first-section p {
   color: #7e8492;
-  width: 60%;
+  width: 65%;
+  line-height: 1.4;
 }
 .footer-newsletter {
   width: 100%;
@@ -175,7 +177,7 @@ p {
   display: inline-block;
   overflow-wrap: break-word;
   hyphens: auto;
-  font-size: 74px;
+  font-size: 64px;
   font-weight: 700;
   color: #c4c4c400;
 }

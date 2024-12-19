@@ -1,0 +1,54 @@
+.empowering-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa; /* Light background */
+  text-align: center;
+}
+
+.empowering-content {
+  max-width: 800px;
+}
+/* 
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+} */
+
+/* h1 .empowering-highlight {
+  color: #666;
+  font-weight: 300;
+} */
+
+/* p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 30px;
+} */
+
+.empowering-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 2px solid #007bff;
+  border-radius: 50px;
+  color: #007bff;
+  font-size: 1rem;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.empowering-button:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.empowering-button .empowering-arrow {
+  margin-left: 10px;
+  font-size: 1.2rem;
+}

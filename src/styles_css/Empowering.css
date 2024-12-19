@@ -1,4 +1,8 @@
 /* Container */
+
+/* p {
+  color: white;
+} */
 .smart-management-container {
   display: flex;
   justify-content: space-between;
