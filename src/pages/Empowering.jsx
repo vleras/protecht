@@ -1,16 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../styles_css/Services.css";
 import "../styles_css/Empowering.css";
-import ourbenefits1 from "../images/ourbenefits1.png";
-import ourbenefits2 from "../images/ourbenefits2.png";
-import ourbenefits3 from "../images/ourbenefits3.png";
-import ourbenefits4 from "../images/ourbenefits4.png";
-import empowering1 from "../images/empowering1.png";
-import empowering2 from "../images/empowering2.png";
-import empowering3 from "../images/empowering3.png";
-import empowering4 from "../images/empowering4.png";
 
 const Empowering = () => {
+  // Use hash from URL for scrolling to specific sections
+  useEffect(() => {
+    const hash = window.location.hash; // Get hash from URL
+    if (hash) {
+      const element = document.querySelector(hash); // Find the element with the corresponding ID
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" }); // Smooth scroll to the element
+      }
+    }
+  }, []);
+
   return (
     <div>
       <div className="hero">
@@ -23,32 +26,36 @@ const Empowering = () => {
         </p>
       </div>
 
-      <section class="smart-management-container">
-        <div class="smart-management-left">
-          <div class="icon-container">
+      {/* Section 1 */}
+      <section
+        id="discovering-smart-management"
+        className="smart-management-container"
+      >
+        <div className="smart-management-left">
+          <div className="icon-container">
             <img
-              src={empowering1}
+              src={require("../images/empowering1.png")}
               alt="Gear Icon"
               className="smart-management-icon"
             />
           </div>
-
-          <h2 class="smart-management-title">Discovering Smart Management</h2>
-          <p class="smart-management-description">
+          <h2 className="smart-management-title">
+            Discovering Smart Management
+          </h2>
+          <p className="smart-management-description">
             Stay on top of your tasks and stay informed about what's happening.
           </p>
         </div>
-
         <div
-          class="smart-management-right"
+          className="smart-management-right"
           style={{
-            backgroundImage: `url(${ourbenefits1})`, // Use the imported image
+            backgroundImage: `url(${require("../images/ourbenefits1.png")})`,
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center center",
-            backgroundSize: "cover", // Optional for better display
+            backgroundSize: "cover",
           }}
         >
-          <div class="content-box">
+          <div className="content-box">
             <p>
               Empower your organization with advanced management tools designed
               to enhance visibility, control, and decision-making.
@@ -71,31 +78,37 @@ const Empowering = () => {
         </div>
       </section>
 
-      <section class="smart-management-container">
-        <div class="smart-management-left">
-          <div class="icon-container">
-            <img src={empowering2} class="smart-management-icon" />
+      {/* Section 2 */}
+      <section
+        id="customized-software-development"
+        className="smart-management-container"
+      >
+        <div className="smart-management-left">
+          <div className="icon-container">
+            <img
+              src={require("../images/empowering2.png")}
+              alt="Custom Software Icon"
+              className="smart-management-icon"
+            />
           </div>
-
-          <h2 class="smart-management-title">
+          <h2 className="smart-management-title">
             Customized Software Development
           </h2>
-          <p class="smart-management-description">
+          <p className="smart-management-description">
             Custom software development is the process of conceptualizing,
             designing.
           </p>
         </div>
-
         <div
-          class="smart-management-right"
+          className="smart-management-right"
           style={{
-            backgroundImage: `url(${ourbenefits2})`, // Use the imported image
+            backgroundImage: `url(${require("../images/ourbenefits2.png")})`,
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center center",
-            backgroundSize: "cover", // Optional for better display
+            backgroundSize: "cover",
           }}
         >
-          <div class="content-box">
+          <div className="content-box">
             <p>
               Experience the power of software that’s built precisely to meet
               your business needs.
@@ -119,33 +132,37 @@ const Empowering = () => {
         </div>
       </section>
 
-      <section class="smart-management-container">
-        <div class="smart-management-left">
-          <div class="icon-container">
+      {/* Section 3 */}
+      <section
+        id="effortless-rapid-communication"
+        className="smart-management-container"
+      >
+        <div className="smart-management-left">
+          <div className="icon-container">
             <img
-              src={empowering3}
+              src={require("../images/empowering3.png")}
               alt="Chat Icon"
-              class="smart-management-icon"
+              className="smart-management-icon"
             />
           </div>
-
-          <h2 class="smart-management-title">Effortless Rapid Communication</h2>
-          <p class="smart-management-description">
+          <h2 className="smart-management-title">
+            Effortless Rapid Communication
+          </h2>
+          <p className="smart-management-description">
             Effortlessly manage your task lists and stay connected with
             real-time updates.
           </p>
         </div>
-
         <div
-          class="smart-management-right"
+          className="smart-management-right"
           style={{
-            backgroundImage: `url(${ourbenefits3})`, // Use the imported image
+            backgroundImage: `url(${require("../images/ourbenefits3.png")})`,
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center center",
-            backgroundSize: "cover", // Optional for better display
+            backgroundSize: "cover",
           }}
         >
-          <div class="content-box">
+          <div className="content-box">
             <p>
               Enhance team productivity and keep everyone connected with our
               rapid communication tools.
@@ -168,35 +185,39 @@ const Empowering = () => {
           </div>
         </div>
       </section>
-      <section class="smart-management-container">
-        <div class="smart-management-left">
-          <div class="icon-container">
+
+      {/* Section 4 */}
+      <section
+        style={{ paddingBottom: "80px" }}
+        id="adaptive-capabilities"
+        className="smart-management-container"
+      >
+        <div className="smart-management-left">
+          <div className="icon-container">
             <img
-              src={empowering4}
+              src={require("../images/empowering4.png")}
               alt="Clipboard Icon"
-              class="smart-management-icon"
+              className="smart-management-icon"
             />
           </div>
-
-          <h2 class="smart-management-title">
+          <h2 className="smart-management-title">
             Stay Ahead with Adaptive Capabilities
           </h2>
-          <p class="smart-management-description">
+          <p className="smart-management-description">
             Stay organized with your task lists and remain updated on the latest
             development.
           </p>
         </div>
-
         <div
-          class="smart-management-right"
+          className="smart-management-right"
           style={{
-            backgroundImage: `url(${ourbenefits4})`, // Use the imported image
+            backgroundImage: `url(${require("../images/ourbenefits4.png")})`,
             backgroundRepeat: "no-repeat",
             backgroundPosition: "center center",
-            backgroundSize: "cover", // Optional for better display
+            backgroundSize: "cover",
           }}
         >
-          <div class="content-box">
+          <div className="content-box">
             <p>
               In a constantly evolving market, adaptability is key to staying
               competitive.

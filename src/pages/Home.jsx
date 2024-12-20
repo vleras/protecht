@@ -1,10 +1,145 @@
 import React from "react";
 import "../styles_css/Home.css";
+import StabilitySection from "./StabilitySection";
+import { useNavigate } from "react-router-dom";
 import rightarrow from "../images/right-arrow.svg";
-import { Link } from "react-router-dom";
+
 const Home = () => {
+  const navigate = useNavigate();
+
+  const handleRedirect = (section) => {
+    navigate(`/services#${section}`);
+  };
   return (
     <div>
+      <div className="hero-section">
+        {/* Main Container */}
+        <div className="hero-grid">
+          {/* Left Container */}
+          <div className="hero-left">
+            <img
+              style={{ width: " 350px" }}
+              src={require("../images/revo.png")}
+              alt="Revolutionary Tech Solutions"
+              className="revolutionary-img"
+            />
+            <h1 className="main-heading2">
+              Elevate your <br />
+              <span className="highlight2">business.</span>
+            </h1>
+          </div>
+
+          {/* Right Container */}
+          <div className="hero-right">
+            <p className="hero-description">
+              Initiating a business venture may appear overwhelming, yet our
+              forte lies in simplifying the entire process for you.
+            </p>
+            <a href="/get-started" className="cta-button">
+              <span>Get Started</span>
+            </a>
+          </div>
+        </div>
+
+        {/* Logos Section */}
+        <div className="logo-section">
+          <p className="partner-text">
+            Partner with us and join the growing network of successful
+            companies.
+          </p>
+          <div className="logos-grid">
+            <a
+              href="https://codershubeu.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={require("../images/codershub.png")}
+                alt="Logo 1"
+                className="logo1"
+              />
+            </a>
+            <a
+              href="https://www.dreilindenag.ch/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={require("../images/dreilinden.png")}
+                alt="Logo 2"
+                className="logo2"
+              />
+            </a>
+            <a
+              href="https://www.bdtronic.com/en-en/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={require("../images/btronic.png")}
+                alt="Logo 3"
+                className="logo3"
+              />
+            </a>
+            <a
+              href="https://reya.cloud/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={require("../images/reya.png")}
+                alt="Logo 4"
+                className="logo4"
+              />
+            </a>
+            <a
+              href="https://www.coop.ch/en/?srsltid=AfmBOoo4FCV7ugKLBq4mOft86zQcOLk58XtUyPJmDfcoIM0llSn58ZXP"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={require("../images/coop.png")}
+                alt="Logo 5"
+                className="logo5"
+              />
+            </a>
+            <a
+              href="https://k-we.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={require("../images/kwe.png")}
+                alt="Logo 6"
+                className="logo6"
+              />
+            </a>
+            <a
+              href="https://dsconnect.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={require("../images/ds.png")}
+                alt="Logo 7"
+                className="logo7"
+              />
+            </a>
+            <a
+              href="https://wirkt.eu/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={require("../images/wirkt.png")}
+                alt="Logo 8"
+                className="logo8"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+
       <div className="empowering-section">
         <div className="empowering-content">
           <p className="black-white">
@@ -40,7 +175,11 @@ const Home = () => {
       <div className="solutions-section">
         <div className="solutions-grid">
           {/* Custom Made Application */}
-          <div className="solution-item">
+          <div
+            className="solution-item"
+            data-target="custom-application"
+            onClick={() => handleRedirect("custom-application")}
+          >
             <img
               src={require("../images/simcard.png")}
               alt="Custom Made Application"
@@ -62,7 +201,11 @@ const Home = () => {
           </div>
 
           {/* Blockchain Development */}
-          <div className="solution-item">
+          <div
+            className="solution-item"
+            data-target="blockchain-development"
+            onClick={() => handleRedirect("blockchain-development")}
+          >
             <img
               src={require("../images/keyboard.png")}
               alt="Blockchain Development"
@@ -78,7 +221,11 @@ const Home = () => {
           </div>
 
           {/* AI Cloud Solutions */}
-          <div className="solution-item">
+          <div
+            className="solution-item"
+            data-target="ai-cloud-solutions"
+            onClick={() => handleRedirect("ai-cloud-solutions")}
+          >
             <img
               src={require("../images/code.png")}
               alt="AI Cloud Solutions"
@@ -95,7 +242,11 @@ const Home = () => {
           </div>
 
           {/* AI Cloud Infrastructure */}
-          <div className="solution-item">
+          <div
+            className="solution-item"
+            data-target="ai-cloud-infrastructure"
+            onClick={() => handleRedirect("ai-cloud-infrastructure")}
+          >
             <img
               src={require("../images/data-2.png")}
               alt="AI Cloud Infrastructure"
@@ -111,7 +262,11 @@ const Home = () => {
           </div>
 
           {/* Cloud Solution and Hosting */}
-          <div className="solution-item">
+          <div
+            className="solution-item"
+            data-target="cloud-solution-hosting"
+            onClick={() => handleRedirect("cloud-solution-hosting")}
+          >
             <img
               src={require("../images/data-2.png")}
               alt="Cloud Solution and Hosting"
@@ -132,7 +287,11 @@ const Home = () => {
           </div>
 
           {/* Fintech */}
-          <div className="solution-item">
+          <div
+            className="solution-item"
+            data-target="fintech"
+            onClick={() => handleRedirect("fintech")}
+          >
             <img
               src={require("../images/programming-arrows.png")}
               alt="Fintech"
@@ -153,7 +312,11 @@ const Home = () => {
           </div>
 
           {/* ERP / SAP */}
-          <div className="solution-item">
+          <div
+            className="solution-item"
+            data-target="erp-sap"
+            onClick={() => handleRedirect("erp-sap")}
+          >
             <img
               src={require("../images/mobile-programming.png")}
               alt="ERP / SAP"
@@ -172,7 +335,11 @@ const Home = () => {
           </div>
 
           {/* IT Support */}
-          <div className="solution-item">
+          <div
+            className="solution-item"
+            data-target="it-support"
+            onClick={() => handleRedirect("it-support")}
+          >
             <img
               src={require("../images/code.png")}
               alt="IT Support"
@@ -189,6 +356,7 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <StabilitySection />
     </div>
   );
 };
