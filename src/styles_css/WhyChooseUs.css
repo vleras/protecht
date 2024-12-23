@@ -249,4 +249,14 @@
     flex-direction: column; /* Change direction to column on mobile */
     width: 90%;
   }
+  .black-white {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+}
+@media (max-width: 724px) {
+  .containeR {
+    padding-bottom: 200px;
+  }
 }

@@ -1,0 +1,25 @@
+.carousel {
+  display: flex;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  cursor: grab;
+  user-select: none;
+  width: 100%;
+}
+
+.carousel:active {
+  cursor: grabbing;
+}
+
+.carousel-item {
+  min-width: 300px; /* Adjust the width as needed */
+  margin-right: 16px; /* Space between images */
+  flex-shrink: 0;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  pointer-events: none; /* Prevent image interference with dragging */
+}
