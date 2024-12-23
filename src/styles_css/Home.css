@@ -33,12 +33,6 @@
   font-size: 1.2rem;
 }
 
-.solutions-section {
-  padding: 0px 20px 30px;
-  text-align: center;
-  background-color: #ffffff;
-}
-
 .solutions-grid {
   display: flex;
   flex-wrap: wrap; /* Allows items to wrap on smaller screens if necessary */
@@ -68,7 +62,7 @@
 }
 
 .solutions-section {
-  padding: 0px 20px;
+  padding: 0px 20px 30px;
   width: 95%;
   text-align: center;
   background-color: #ffffff;
@@ -123,7 +117,7 @@ p .highlight {
   font-size: 18px;
   line-height: 1.8;
   color: #5a5d79; /* Grey color */
-  max-width: 600px;
+  width: 40%;
 }
 
 .cta-button2 {
@@ -275,4 +269,65 @@ p .highlight {
 
 .logo8 {
   width: 89px;
+}
+
+@media (max-width: 950px) {
+  .endless-solutions {
+    display: flex;
+    flex-direction: column;
+  }
+  .endless-text {
+    text-align: center;
+    width: 100%;
+    margin: 5px;
+  }
+
+  .solutions-grid {
+    gap: 0;
+  }
+  .custom-container {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  .content-item img {
+    width: 70px;
+  }
+  .header-section {
+    margin-bottom: 20px !important;
+  }
+  .black-white {
+    margin-bottom: 30px !important;
+  }
+
+  .empowering-content {
+    width: 90%;
+  }
+}
+@media (max-width: 768px) {
+  .solutions-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* Optional: Adjust spacing between items */
+  }
+
+  .solution-item {
+    width: 100%; /* Make each container full width */
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  .solutions-section {
+    padding: 0;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .solution-item > * {
+    margin: 5px;
+  }
+
+  .solution-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 16px; /* Space below the image */
+  }
 }

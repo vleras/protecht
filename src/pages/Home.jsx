@@ -3,7 +3,7 @@ import "../styles_css/Home.css";
 import StabilitySection from "./StabilitySection";
 import { useNavigate } from "react-router-dom";
 import rightarrow from "../images/right-arrow.svg";
-
+import rightarrow2 from "../images/rightarrow.png";
 const Home = () => {
   const navigate = useNavigate();
 
@@ -35,8 +35,11 @@ const Home = () => {
               Initiating a business venture may appear overwhelming, yet our
               forte lies in simplifying the entire process for you.
             </p>
-            <a href="/get-started" className="cta-button">
-              <span>Get Started</span>
+            <a href="/contact" className="cta-button">
+              <span className="button-text">Get Started</span>
+              <span className="button-icon">
+                <img src={rightarrow2} alt="Arrow Icon" />
+              </span>
             </a>
           </div>
         </div>
