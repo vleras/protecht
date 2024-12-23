@@ -2,6 +2,7 @@ import React from "react";
 import "../styles_css/Home.css";
 import StabilitySection from "./StabilitySection";
 import OurWork from "./OurWork";
+import WhyChooseUs from "./WhyChooseUs";
 import { useNavigate } from "react-router-dom";
 import rightarrow from "../images/right-arrow.svg";
 import rightarrow2 from "../images/rightarrow.png";
@@ -363,6 +364,7 @@ const Home = () => {
       </div>
       <StabilitySection />
       <OurWork />
+      <WhyChooseUs />
     </div>
   );
 };

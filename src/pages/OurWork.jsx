@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles_css/OurWork.css";
-// import "../styles_css/Home.css";
+
 import rightarrow from "../images/right-arrow.svg";
 const OurWork = () => {
   return (

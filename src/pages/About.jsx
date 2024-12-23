@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import rightarrow from "../images/rightarrow.png";
-import { Link } from "react-router-dom";
 
 import "../styles_css/Services.css";
 import "../styles_css/About.css";
