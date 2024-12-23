@@ -1,9 +1,11 @@
 import React from "react";
 import "../styles_css/Home.css";
 import StabilitySection from "./StabilitySection";
+import OurWork from "./OurWork";
 import { useNavigate } from "react-router-dom";
 import rightarrow from "../images/right-arrow.svg";
 import rightarrow2 from "../images/rightarrow.png";
+
 const Home = () => {
   const navigate = useNavigate();
 
@@ -360,6 +362,7 @@ const Home = () => {
         </div>
       </div>
       <StabilitySection />
+      <OurWork />
     </div>
   );
 };
