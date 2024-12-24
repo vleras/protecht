@@ -242,6 +242,9 @@
 
 /* Hide Desktop Sidebar on Mobile */
 @media (max-width: 1024px) {
+  .containeR {
+    min-height: 85vh;
+  }
   .sidebar {
     display: none;
   }
@@ -252,7 +255,9 @@
   .black-white {
     text-align: center;
     margin: 0;
-    padding: 0;
+    padding-top: 20px;
+    padding-bottom: 0;
+    width: 100%;
   }
 }
 @media (max-width: 724px) {

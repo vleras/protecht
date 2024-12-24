@@ -197,9 +197,17 @@ p {
 }
 
 @media (max-width: 850px) {
+  .footer-container {
+    padding: 0;
+    padding-top: 50px;
+  }
+  .first-section .innovative {
+    text-align: center;
+  }
   .first-section1 {
     flex-direction: column;
     align-items: flex-start;
+    width: 90%;
   }
 
   .first-section p,
@@ -212,6 +220,10 @@ p {
     margin-top: 40px;
     flex-direction: row;
     align-items: flex-start;
+    width: 90%;
+  }
+  .rights {
+    width: 90%;
   }
 }
 

@@ -56,9 +56,10 @@
 }
 
 .paragraph {
-  font-size: 16px;
-  color: #475467;
-  line-height: 1.4;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #5a5d79;
+  margin-top: 0;
 }
 
 .solutions-section {
@@ -301,6 +302,47 @@ p .highlight {
 
   .empowering-content {
     width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .hero-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .main-heading2 {
+    text-align: center;
+  }
+  .hero-description {
+    text-align: center;
+    width: 100%;
+  }
+  .revolutionary-img {
+    margin: 0 auto;
+  }
+  .partner-text {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .cta-button {
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  .hero-right {
+    margin: 0;
+    width: 100%;
+  }
+  .hero-left {
+    display: flex;
+    width: 80%;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+  }
+  .logos-grid {
+    gap: 40px;
   }
 }
 @media (max-width: 768px) {
@@ -329,5 +371,8 @@ p .highlight {
     width: 32px;
     height: 32px;
     margin-bottom: 16px; /* Space below the image */
+  }
+  .nav-links {
+    display: none;
   }
 }
