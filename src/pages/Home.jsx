@@ -3,11 +3,12 @@ import "../styles_css/Home.css";
 import StabilitySection from "./StabilitySection";
 import OurWork from "./OurWork";
 import WhyChooseUs from "./WhyChooseUs";
+import Menu from "../components/Menu";
 import { useNavigate } from "react-router-dom";
 import rightarrow from "../images/right-arrow.svg";
 import rightarrow2 from "../images/rightarrow.png";
-import Carousel from "./ImageCarousel"; // Update path as needed
-import { images } from "./carouselData"; // Update path as needed
+import Carousel from "./ImageCarousel";
+import { images } from "./carouselData";
 const Home = () => {
   const navigate = useNavigate();
 
@@ -368,6 +369,7 @@ const Home = () => {
       <WhyChooseUs />
 
       <Carousel images={images} />
+      <Menu />
     </div>
   );
 };

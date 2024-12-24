@@ -148,7 +148,7 @@ p .highlight {
 }
 
 .hero-section {
-  background: linear-gradient(180deg, #0d0e13, #1a1c26);
+  background: black;
   color: #ffffff;
   padding: 50px 20px;
 }
@@ -343,6 +343,9 @@ p .highlight {
   }
   .logos-grid {
     gap: 40px;
+  }
+  .solution-item {
+    width: 50%;
   }
 }
 @media (max-width: 768px) {

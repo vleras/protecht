@@ -37,12 +37,24 @@
   color: white; /* Optional hover effect */
 }
 
-@media (max-width: 768px) {
-  .nav-links {
-    display: flex;
-    flex-direction: column;
-  }
+@media (max-width: 1024px) {
   .header {
     width: 100%;
   }
+}
+@media (max-width: 768px) {
+  .navv {
+    display: none;
+  }
+
+  .menu-icon {
+    display: block !important; /* Show menu icon on mobile */
+    cursor: pointer;
+    width: 40px; /* Adjust the size */
+    height: 40px;
+  }
+}
+
+.menu-icon {
+  display: none; /* Hide menu icon by default */
 }
