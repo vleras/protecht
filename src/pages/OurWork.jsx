@@ -6,7 +6,7 @@ const OurWork = () => {
   return (
     <div>
       <section class="endless-solutions">
-        <h1 class="black-white">Our Work</h1>
+        <h1 class="black-white4">Our Work</h1>
         <p class="endless-text">
           Our offerings encompass services that serve as startup mentoring or
           include consulting, contributing to the enhanced value proposition of

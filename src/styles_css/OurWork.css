@@ -180,6 +180,7 @@
 }
 .cont3 {
   display: block;
+  display: flex;
 }
 
 /* Mobile responsive styles */
@@ -189,6 +190,9 @@
     width: 60%;
   }
 
+  .cont {
+    width: 100%;
+  }
   .service-item.two,
   .service-item.three {
     width: 40%;
@@ -215,7 +219,7 @@
   padding-top: 30px;
 }
 
-.black-white {
+.black-white4 {
   background: linear-gradient(
     180deg,
     #13151f 0%,

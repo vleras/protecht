@@ -4,6 +4,7 @@ import logo from "../images/logo.png";
 import linkedin from "../images/linkedin.svg";
 import instagram from "../images/instagram.svg";
 import facebook from "../images/facebook.svg";
+import { NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -66,17 +67,19 @@ const Footer = () => {
           <div className="names">
             <div class="footer-links">
               <h4>Company</h4>
-              <a href="#">About us</a>
-              <a href="#">Careers</a>
-              <a href="#">News</a>
-              <a href="#">Contact</a>
+              <NavLink to="/about">About us</NavLink>
+              <NavLink to="/careers">Careers</NavLink>
+              <a href="https://www.linkedin.com/company/protechtch/posts/?feedView=all">
+                News
+              </a>
+              <NavLink to="/contact">Contact</NavLink>
             </div>
 
             <div class="footer-links">
               <h4>Legal</h4>
-              <a href="#">Terms</a>
-              <a href="#">Privacy</a>
-              <a href="#">Imprint</a>
+              <NavLink to="/terms">Terms</NavLink>
+              <NavLink to="/privacy">Privacy</NavLink>
+              <NavLink to="/impressum">Imprint</NavLink>
             </div>
           </div>
         </div>
@@ -96,7 +99,7 @@ const Footer = () => {
               <img
                 src={instagram}
                 alt="Instagram"
-                className="icon"
+                className="instagram"
                 style={{ width: "37px", height: "37px" }}
               />
             </a>
@@ -104,7 +107,7 @@ const Footer = () => {
               <img
                 src={facebook}
                 alt="facebook"
-                className="icon"
+                className="facebook"
                 style={{ width: "30px", height: "32px" }}
               />
             </a>

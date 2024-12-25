@@ -5,7 +5,7 @@ import "../styles_css/Services.css";
 import "../styles_css/About.css";
 import Muhamer from "../images/Muhamer.jpg";
 import Bujar from "../images/BujarDemolli.jpg";
-import Bujar2 from "../images/BujarDemolli2.jpg";
+import Shadows from "../components/Shadows";
 
 const About = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -27,6 +27,7 @@ const About = () => {
   return (
     <div>
       <div className="hero">
+        <Shadows />
         <h3 className="services-heading">About us</h3>
         <h1 className="main-heading">Innovating Beyond Boundaries</h1>
         <p className="subheading">

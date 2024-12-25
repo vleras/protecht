@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import "../styles_css/Services.css";
 import "../styles_css/Empowering.css";
+import Shadows from "../components/Shadows";
 
 const Empowering = () => {
   // Use hash from URL for scrolling to specific sections
@@ -17,6 +18,7 @@ const Empowering = () => {
   return (
     <div>
       <div className="hero">
+        <Shadows />
         <h3 className="services-heading">Our Benefits</h3>
         <h1 className="main-heading">
           Our benefits cater to your convenience.

@@ -60,7 +60,12 @@ function WhyChooseUs() {
 
   return (
     <div className="containeR">
-      <h1 className="black-white">Why Choose Us?</h1>
+      <h1
+        className="black-white3"
+        style={{ paddingTop: "40px", paddingBottom: "20px" }}
+      >
+        Why Choose Us?
+      </h1>
 
       <div className="wrapper row">
         {isMobile ? (

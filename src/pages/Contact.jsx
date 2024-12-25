@@ -6,6 +6,7 @@ import LinkedIcon from "../images/linkedin-svgrepo-com.svg";
 import FacebookIcon from "../images/facebook2.svg";
 import InstagramIcon from "../images/instagram.svg";
 import "../styles_css/Contact.css";
+import Shadows from "../components/Shadows";
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -24,9 +25,14 @@ const Contact = () => {
 
   return (
     <div className="contact-page">
+      <Shadows />
       <div
         className="container"
-        style={{ minHeight: "500px", position: "relative" }}
+        style={{
+          minHeight: "500px",
+          position: "relative",
+          paddingTop: "100px",
+        }}
       >
         {isSubmitting && (
           <div className="spinner-overlay">

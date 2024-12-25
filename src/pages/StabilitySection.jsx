@@ -15,7 +15,7 @@ const StabilitySection = () => {
       <div className="custom-container">
         {/* Header Section */}
         <div className="header-section">
-          <h1 className="black-white">
+          <h1 className="black-white5">
             Ensuring Stability and Growth with Custom Business Solutions.
           </h1>
           <p className="title">

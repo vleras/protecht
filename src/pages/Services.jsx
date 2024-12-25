@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "../styles_css/Services.css";
 import rightarrow from "../images/rightarrow.png";
 import { useLocation } from "react-router-dom";
-
+import Shadows from "../components/Shadows";
 const Services = () => {
   const { hash } = useLocation();
 
@@ -17,6 +17,7 @@ const Services = () => {
   return (
     <div>
       <div className="hero">
+        <Shadows />
         <h3 className="services-heading">Services</h3>
         <h1 className="main-heading">
           Your Creative Journey Starts Here. Our Comprehensive Services

@@ -29,7 +29,7 @@
   max-width: 33%;
 }
 
-.black-white {
+.black-white3 {
   background: linear-gradient(
     180deg,
     #13151f 0%,
@@ -252,7 +252,7 @@
     flex-direction: column; /* Change direction to column on mobile */
     width: 90%;
   }
-  .black-white {
+  .black-white3 {
     text-align: center;
     margin: 0;
     padding-top: 20px;

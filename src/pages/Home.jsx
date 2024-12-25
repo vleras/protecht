@@ -9,6 +9,8 @@ import rightarrow from "../images/right-arrow.svg";
 import rightarrow2 from "../images/rightarrow.png";
 import Carousel from "./ImageCarousel";
 import { images } from "./carouselData";
+import Shadows from "../components/Shadows";
+
 const Home = () => {
   const navigate = useNavigate();
 
@@ -18,6 +20,7 @@ const Home = () => {
   return (
     <div>
       <div className="hero-section">
+        <Shadows />
         {/* Main Container */}
         <div className="hero-grid">
           {/* Left Container */}
@@ -154,8 +157,8 @@ const Home = () => {
             Empowering Businesses through Revolutionary Tech Solutions
           </p>
           <p className="paragraph">
-            We provide innovative solutions to launch, scale, <br />
-            and achieve sustained success in their ventures
+            We provide innovative solutions to launch, scale, and achieve
+            sustained success in their ventures
           </p>
           <a href="/contact" className="cta-button2">
             <span
@@ -369,7 +372,6 @@ const Home = () => {
       <WhyChooseUs />
 
       <Carousel images={images} />
-      <Menu />
     </div>
   );
 };
