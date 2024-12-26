@@ -56,6 +56,10 @@
     width: 40px; /* Adjust the size */
     height: 40px;
   }
+
+  .logo-image {
+    width: 180px;
+  }
 }
 
 .menu-icon {

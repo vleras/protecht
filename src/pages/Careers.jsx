@@ -1,3 +1,5 @@
+import React from "react";
+
 import Shadows from "../components/Shadows";
 import "../styles_css/Careers.css";
 
