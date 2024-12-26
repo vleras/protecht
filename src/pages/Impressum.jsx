@@ -1,89 +1,74 @@
-// import React, { useState } from "react";
-// import { Viewer } from "@react-pdf-viewer/core";
-// import "@react-pdf-viewer/core/lib/styles/index.css";
-// import ImpressumPdf from "../images/Impressum.pdf"; // Correctly imported PDF
+import React, { useState } from "react";
+import ImpressumImg from "../images/Impressum.jpg"; // Import your image file
+import "../styles_css/Impressum.css";
+import Shadows from "../components/Shadows";
+import "../styles_css/Terms.css";
 
-// const Impressum = () => {
-//   const [isModalOpen, setIsModalOpen] = useState(false);
+const Impressum = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-//   // Function to toggle modal visibility
-//   const toggleModal = () => {
-//     setIsModalOpen(!isModalOpen);
-//   };
+  const toggleModal = () => {
+    console.log("Modal toggled"); // Debugging log
+    setIsModalOpen(!isModalOpen);
+  };
 
-//   return (
-//     <div>
-//       <h1>Impressum</h1>
-//       {/* Thumbnail or link to open modal */}
-//       <div
-//         style={{
-//           cursor: "pointer",
-//           display: "inline-block",
-//           margin: "20px",
-//           border: "1px solid #ccc",
-//           padding: "10px",
-//           borderRadius: "8px",
-//           backgroundColor: "#f9f9f9",
-//         }}
-//         onClick={toggleModal}
-//       >
-//         <img
-//           src="https://via.placeholder.com/150" // Replace with your thumbnail if available
-//           alt="Impressum Thumbnail"
-//           style={{ display: "block", width: "100%", borderRadius: "8px" }}
-//         />
-//         <p style={{ textAlign: "center" }}>View Impressum</p>
-//       </div>
+  return (
+    <div>
+      <div className="hero">
+        <Shadows />
 
-//       {/* Modal */}
-//       {isModalOpen && (
-//         <div
-//           style={{
-//             position: "fixed",
-//             top: 0,
-//             left: 0,
-//             width: "100%",
-//             height: "100%",
-//             backgroundColor: "rgba(0, 0, 0, 0.7)",
-//             display: "flex",
-//             justifyContent: "center",
-//             alignItems: "center",
-//             zIndex: 1000,
-//           }}
-//         >
-//           <div
-//             style={{
-//               width: "80%",
-//               height: "80%",
-//               backgroundColor: "#fff",
-//               borderRadius: "10px",
-//               overflow: "hidden",
-//               position: "relative",
-//             }}
-//           >
-//             <button
-//               style={{
-//                 position: "absolute",
-//                 top: "10px",
-//                 right: "10px",
-//                 backgroundColor: "#ff5c5c",
-//                 color: "#fff",
-//                 border: "none",
-//                 borderRadius: "5px",
-//                 padding: "5px 10px",
-//                 cursor: "pointer",
-//                 zIndex: 1001,
-//               }}
-//               onClick={toggleModal}
-//             >
-//               Close
-//             </button>
-//             <Viewer fileUrl={ImpressumPdf} />
-//           </div>
-//         </div>
-//       )}
-//     </div>
-//   );
-// };
+        <h1 className="main-heading">Impressum</h1>
+        <p className="subheading">
+          Innovating without limits, empowering your vision
+        </p>
+      </div>
+      {/* Thumbnail to open the modal */}
+      <div className="bigcont" onClick={toggleModal}>
+        <img
+          src={ImpressumImg} // Thumbnail image
+          alt="Impressum Thumbnail"
+          style={{
+            display: "block",
+            width: "100%",
+            borderRadius: "8px",
+            boxShadow: "rgba(100, 100, 111, 0.2) 0px 7px 29px 0px",
+          }}
+        />
+      </div>
 
-// export default Impressum;
+      {/* Full-screen modal */}
+      {isModalOpen && (
+        <div
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundColor: "rgba(0, 0, 0, 0.7)",
+            zIndex: 1000,
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+          onClick={toggleModal} // Close modal when clicking on background
+        >
+          <img
+            src={ImpressumImg} // Full-screen image
+            alt="Impressum"
+            className="modal"
+            style={{
+              maxWidth: "90%",
+              maxHeight: "90%",
+              width: "auto",
+              height: "auto",
+            }}
+            onClick={(e) => e.stopPropagation()} // Prevent closing modal when clicking on image
+          />
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Impressum;

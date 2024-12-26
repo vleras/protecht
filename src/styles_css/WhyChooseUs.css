@@ -1,5 +1,4 @@
 .containeR {
-  min-height: 100vh;
   background-color: #f8f8f8;
   width: 100%;
 }
@@ -48,6 +47,7 @@
   margin: 0 auto;
 
   padding: 60px 0 60px;
+  padding-bottom: 60px !important;
 }
 
 .progress-bar-container {
@@ -245,7 +245,8 @@
 /* Hide Desktop Sidebar on Mobile */
 @media (max-width: 1024px) {
   .containeR {
-    min-height: 85vh;
+    max-height: 90vh;
+    padding-bottom: 30px;
   }
   .sidebar {
     display: none;
@@ -264,6 +265,6 @@
 }
 @media (max-width: 724px) {
   .containeR {
-    padding-bottom: 200px;
+    padding-bottom: 100px;
   }
 }
