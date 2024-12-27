@@ -4,7 +4,7 @@ import StabilitySection from "./StabilitySection";
 import OurWork from "./OurWork";
 import WhyChooseUs from "./WhyChooseUs";
 import SliderApp from "./Slider";
-import TestimonialSlider from "./TestimonialSlider";
+import Testimonials from "./TestimonialSlider";
 
 import { useNavigate } from "react-router-dom";
 import rightarrow from "../images/right-arrow.svg";
@@ -375,7 +375,7 @@ const Home = () => {
 
       <Carousel images={images} />
       {/* <SliderApp /> */}
-      <TestimonialSlider />
+      <Testimonials />
     </div>
   );
 };
