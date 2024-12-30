@@ -158,7 +158,7 @@ const Home = () => {
           <p className="black-white">
             Empowering Businesses through Revolutionary Tech Solutions
           </p>
-          <p className="paragraph">
+          <p className="paragraph we">
             We provide innovative solutions to launch, scale, and achieve
             sustained success in their ventures
           </p>

@@ -67,7 +67,9 @@ const SliderApp = () => {
 
   return (
     <div style={{ width: "80%", margin: "0 auto", position: "relative" }}>
-      <h2 style={{ textAlign: "center" }}>Hear from our customers</h2>
+      <h2 style={{ textAlign: "center" }}>
+        Hear from our <span className="customers"> customers</span>
+      </h2>
       <Slider {...settings}>
         {testimonials.map((testimonial, index) => (
           <div

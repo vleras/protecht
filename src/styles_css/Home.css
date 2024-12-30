@@ -59,10 +59,16 @@
   font-size: 18px;
   line-height: 1.8;
   color: #5a5d79;
-  margin-top: 0;
-  /* padding-top: 20px; */
 }
-
+.paragraph.we {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #5a5d79;
+  margin-top: 0;
+  width: 60%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
 .solutions-section {
   padding: 0px 20px 30px;
   width: 95%;
@@ -377,6 +383,10 @@ p .highlight {
     display: flex;
     flex-direction: column;
     gap: 16px; /* Optional: Adjust spacing between items */
+  }
+
+  .paragraph.we {
+    width: 100%;
   }
   .hero-section {
     /* min-height: 130vh; */

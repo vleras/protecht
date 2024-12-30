@@ -1,3 +1,4 @@
+// Contact.jsx
 import React, { useState } from "react";
 import Location from "../images/location.png";
 import PhoneIcon from "../images/call.png";
@@ -7,20 +8,66 @@ import FacebookIcon from "../images/facebook2.svg";
 import InstagramIcon from "../images/instagram.svg";
 import "../styles_css/Contact.css";
 import Shadows from "../components/Shadows";
+import { db } from "../database_connection/firebase";
+import { collection, addDoc } from "firebase/firestore";
 
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [errors, setErrors] = useState({});
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    setTimeout(() => {
+    const formData = {
+      "First Name": e.target[0].value,
+      "Last Name": e.target[1].value,
+      Email: e.target[2].value,
+      "Phone Number": e.target[3].value,
+      Message: e.target[4].value,
+    };
+
+    const validationErrors = {};
+
+    // Validate phone number
+    if (
+      formData["Phone Number"].length < 9 ||
+      !/^[0-9]+$/.test(formData["Phone Number"])
+    ) {
+      validationErrors.phoneNumber =
+        "Phone number must be at least 9 digits and only contain numbers.";
+    }
+
+    // Validate email
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.Email)) {
+      validationErrors.email = "Please enter a valid email address.";
+    }
+
+    // Validate required fields
+    if (!formData["First Name"])
+      validationErrors.firstName = "First name is required.";
+    if (!formData["Last Name"])
+      validationErrors.lastName = "Last name is required.";
+
+    setErrors(validationErrors);
+
+    // Stop submission if there are validation errors
+    if (Object.keys(validationErrors).length > 0) {
+      setIsSubmitting(false);
+      return;
+    }
+
+    try {
+      await addDoc(collection(db, "Contact Form"), formData);
       setIsSubmitting(false);
       setIsSubmitted(true);
-      e.target.reset(); // Reset the form fields
-    }, 2000); // Simulate API call delay
+      e.target.reset();
+    } catch (error) {
+      console.error("Error saving contact form data: ", error);
+      alert("Failed to send message. Please try again.");
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -63,7 +110,7 @@ const Contact = () => {
               <img src={Location} alt="Location" className="icon" />
               <div>
                 <a
-                  href="https://www.google.com/maps/place/Zugerstrasse+72,+6340+Baar,+Zvic%C3%ABr/@47.1839632,8.519829,17z/data=!3m1!4b1!4m6!3m5!1s0x479aaa45a6961be7:0xcb08f337311a63e6!8m2!3d47.1839632!4d8.519829!16s%2Fg%2F11c1yxx4f8?entry=ttu&g_ep=EgoyMDI0MTExMC4wIKXMDSoASAFQAw%3D%3D"
+                  href="https://www.google.com/maps/place/Zugerstrasse+72,+6340+Baar"
                   className="text"
                   style={{ margin: "0", textDecoration: "none" }}
                   target="_blank"
@@ -108,17 +155,29 @@ const Contact = () => {
         <div className="contact-form" style={{ minHeight: "400px" }}>
           {isSubmitted ? (
             <div className="popup">
-              <p>Your message has been sent successfully!</p>
+              <p style={{ textAlign: "center" }}>
+                Your message has been sent successfully!
+              </p>
               <button onClick={() => setIsSubmitted(false)}>Close</button>
             </div>
           ) : (
             <form onSubmit={handleSubmit}>
               <div className="form-group">
                 <input type="text" placeholder="First name" required />
+                {errors.firstName && (
+                  <p className="error-text">⚠ {errors.firstName}</p>
+                )}
                 <input type="text" placeholder="Last name" required />
+                {errors.lastName && (
+                  <p className="error-text">⚠ {errors.lastName}</p>
+                )}
               </div>
               <input type="email" placeholder="Email" required />
-              <input type="tel" placeholder="Phone number" />
+              {errors.email && <p className="error-text">⚠ {errors.email}</p>}
+              <input type="tel" placeholder="Phone number" required />
+              {errors.phoneNumber && (
+                <p className="error-text">⚠ {errors.phoneNumber}</p>
+              )}
               <textarea
                 style={{
                   fontFamily: "Arial, sans-serif",
@@ -129,7 +188,14 @@ const Contact = () => {
                 placeholder="Leave a message..."
                 rows="6"
               ></textarea>
-              <button type="submit" disabled={isSubmitting}>
+              {errors.message && (
+                <p className="error-text">⚠ {errors.message}</p>
+              )}
+              <button
+                style={{ marginBottom: "0px" }}
+                type="submit"
+                disabled={isSubmitting}
+              >
                 Send message
               </button>
             </form>
@@ -141,3 +207,133 @@ const Contact = () => {
 };
 
 export default Contact;
+
+// import React, { useState } from "react";
+// import { db } from "../database_connection/firebase";
+// import { collection, addDoc } from "firebase/firestore";
+// import "../styles_css/Contact.css";
+
+// const Contact = () => {
+//   const [isSubmitting, setIsSubmitting] = useState(false);
+//   const [isSubmitted, setIsSubmitted] = useState(false);
+//   const [errors, setErrors] = useState({});
+
+//   const validate = (formData) => {
+//     const newErrors = {};
+//     const phoneRegex = /^[0-9]{9,}$/; // At least 9 digits, only numbers
+//     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email validation
+
+//     if (!formData["First Name"])
+//       newErrors["First Name"] = "First name is required.";
+//     if (!formData["Last Name"])
+//       newErrors["Last Name"] = "Last name is required.";
+//     if (!emailRegex.test(formData.Email))
+//       newErrors.Email = "Enter a valid email address.";
+//     if (!phoneRegex.test(formData["Phone Number"]))
+//       newErrors["Phone Number"] = "Phone number must have at least 9 digits.";
+//     if (!formData.Message) newErrors.Message = "Message cannot be empty.";
+
+//     return newErrors;
+//   };
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+//     setIsSubmitting(true);
+
+//     const formData = {
+//       "First Name": e.target[0].value,
+//       "Last Name": e.target[1].value,
+//       Email: e.target[2].value,
+//       "Phone Number": e.target[3].value,
+//       Message: e.target[4].value,
+//     };
+
+//     const validationErrors = validate(formData);
+//     if (Object.keys(validationErrors).length > 0) {
+//       setErrors(validationErrors);
+//       setIsSubmitting(false);
+//       return;
+//     }
+
+//     try {
+//       await addDoc(collection(db, "Contact Form"), formData);
+//       setIsSubmitting(false);
+//       setIsSubmitted(true);
+//       e.target.reset(); // Reset the form fields
+//       setErrors({}); // Clear errors
+//     } catch (error) {
+//       console.error("Error saving contact form data: ", error);
+//       alert("Failed to send message. Please try again.");
+//       setIsSubmitting(false);
+//     }
+//   };
+
+//   return (
+//     <div className="contact-page">
+//       <div
+//         className="container"
+//         style={{
+//           minHeight: "500px",
+//           position: "relative",
+//           paddingTop: "100px",
+//         }}
+//       >
+//         {isSubmitting && (
+//           <div className="spinner-overlay">
+//             <div className="spinner"></div>
+//           </div>
+//         )}
+
+//         <div className="contact-form" style={{ minHeight: "400px" }}>
+//           {isSubmitted ? (
+//             <div className="popup">
+//               <p style={{ textAlign: "center" }}>
+//                 Your message has been sent successfully!
+//               </p>
+//               <button onClick={() => setIsSubmitted(false)}>Close</button>
+//             </div>
+//           ) : (
+//             <form onSubmit={handleSubmit}>
+//               <div className="form-group">
+//                 <input type="text" placeholder="First name" />
+//                 {errors["First Name"] && (
+//                   <p className="error-text">{errors["First Name"]}</p>
+//                 )}
+//                 <input type="text" placeholder="Last name" />
+//                 {errors["Last Name"] && (
+//                   <p className="error-text">{errors["Last Name"]}</p>
+//                 )}
+//               </div>
+//               <input type="email" placeholder="Email" />
+//               {errors.Email && <p className="error-text">{errors.Email}</p>}
+//               <input type="tel" placeholder="Phone number" />
+//               {errors["Phone Number"] && (
+//                 <p className="error-text">{errors["Phone Number"]}</p>
+//               )}
+//               <textarea
+//                 style={{
+//                   fontFamily: "Arial, sans-serif",
+//                   minHeight: "100px",
+//                   width: "100%",
+//                   resize: "none",
+//                 }}
+//                 placeholder="Leave a message..."
+//                 rows="6"
+//               ></textarea>
+//               {errors.Message && <p className="error-text">{errors.Message}</p>}
+//               <button
+//                 style={{ marginBottom: "0px" }}
+//                 type="submit"
+//                 disabled={isSubmitting}
+//               >
+//                 Send message
+//               </button>
+//             </form>
+//           )}
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default Contact;

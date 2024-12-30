@@ -179,7 +179,7 @@ textarea::-webkit-input-placeholder {
     padding: 8px;
   }
 }
-/* Add this to your CSS file */
+
 .spinner-overlay {
   position: absolute;
   top: 0;
@@ -209,4 +209,11 @@ textarea::-webkit-input-placeholder {
   100% {
     transform: rotate(360deg);
   }
+}
+
+.error-text {
+  color: red;
+  margin: 0px;
+  margin-top: -10px;
+  margin-bottom: 5px;
 }

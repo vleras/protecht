@@ -12,7 +12,7 @@ const About = () => {
 
   // Check window size and set state
   const handleResize = () => {
-    setIsMobile(window.innerWidth <= 768); // Adjust breakpoint as needed
+    setIsMobile(window.innerWidth <= 968); // Adjust breakpoint as needed
   };
 
   useEffect(() => {
