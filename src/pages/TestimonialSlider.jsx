@@ -4,7 +4,6 @@ import "../styles_css/Testimonial.css";
 import BujarImage from "../images/bujar.png";
 import YvonneImage from "../images/yvonne.png";
 import ArberImage from "../images/arber.png";
-import JohnImage from "../images/bujar.png"; // Add your fourth image
 
 const testimonials = [
   {
@@ -33,15 +32,6 @@ const testimonials = [
     image: ArberImage,
     quote:
       "Protecht's expertise in AI and Cloud has been pivotal in transforming our datacenter into a green, AI-driven powerhouse. Their skills and dedication have been key to the success of our reYa cloud and AI datacenter, enabling us to meet the evolving challenges of modern technology.",
-  },
-  {
-    id: 4,
-    name: "John Smith",
-    role: "CTO",
-    company: "TechCorp",
-    image: JohnImage,
-    quote:
-      "Working with Protecht has transformed our technological infrastructure. Their innovative solutions and dedicated support have helped us achieve new heights in our digital capabilities.",
   },
 ];
 

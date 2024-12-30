@@ -12,6 +12,7 @@ import Contact from "./pages/Contact";
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import Impressum from "./pages/Impressum";
+import languageConfig from "./languageConfig";
 import "./App.css";
 import "./fonts/Satoshi_Complete/Fonts/WEB/css/satoshi.css";
 

@@ -179,7 +179,20 @@
   text-decoration: none; /* Removes the underline */
   color: inherit; /* Optional: Ensures the color matches the parent styling */
 }
+@media (max-width: 1050px) {
+  .description {
+    width: 70%;
+  }
+  .services-number {
+    flex-direction: column;
+    margin: 0;
+    width: 50%;
+  }
 
+  .services-text h2 {
+    margin: 0;
+  }
+}
 @media (max-width: 768px) {
   .services-images {
     display: flex;

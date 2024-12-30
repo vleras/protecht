@@ -357,7 +357,7 @@ const Services = () => {
       </div>
 
       {/* Consulting */}
-      <div className="services-section">
+      <div className="services-section" style={{ marginBottom: "80px" }}>
         <div className="services-content">
           <div className="services-number">
             <h1>10</h1>
